@@ -1,0 +1,25 @@
+ START 11 OCT 2014
+
+array_map // var_dump(function(){ return 0}) - вернет объект  //typecasting  $i = (int)$i;
+var_dump((object)$a);
+function  must return one data type if it doesn't typecast manually //return
+function multiply($a, $b) {return (float)($a * $b);
+echo "123".PHP_EOL(перенос строки);}
+
+
+старый подход array_map(callback trim)
+
+PSR php-fig.org
+
+ctrl+alt+l code formatting
+
+composer
+packagist.com
+
+grep
+
+dpkg (show all installed packages) -l (list) | grep nginx
+
+cat /etc/hosts | grep ip | grep 123
+
+composer package

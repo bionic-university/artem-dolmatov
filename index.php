@@ -1,3 +1,6 @@
 <?
-echo "PC-2";
-?>
+echo "hello";
+if(true){
+    doit();
+    return 0;
+}
