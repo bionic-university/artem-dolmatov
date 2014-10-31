@@ -12,8 +12,12 @@ $chest = new chest();
 $gates = new gates();
 $window = new window();
 
-$keeper = new keyKeeper($window);
+$keeper = new keyKeeper();
 
+$keeper->action($window);
+$keeper->action($window);
 $keeper->action($chest);
 $keeper->action($chest);
+$keeper->action($chest);
+$keeper->action($chests);
 
