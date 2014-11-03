@@ -6,19 +6,15 @@ class keyKeeper
 
     public function __construct($object = false)
     {
-        if (is_object($object)) $this->action($object);
-        elseif (false === $object) {
-            $this->string = " KeyKeeper ready |";
+        if (is_object($object)) {
+            $this->action($object);
+        } elseif (false === $object) {
+            $this->string = PHP_EOL . ' KeyKeeper is ready ' . PHP_EOL;
             echo $this;
         } else {
-            $this->string = ' I can not open this thing  |';
+            $this->string = ' I can not open this thing  ' . PHP_EOL;
             echo $this;
         }
-    }
-
-    public function __toString()
-    {
-        return $this->string;
     }
 
     public function action($object)
@@ -30,11 +26,15 @@ class keyKeeper
         } elseif ($object instanceof OpenClose) {
             $this->string = $object->openClose();
             echo $this;
+        } else {
+            $this->string = ' KeyKeeper can not open this thing  :( ' . PHP_EOL;
+            echo $this;
         }
-        else {
-        $this->string = ' I can not open this thing  |';
-        echo $this;
     }
+
+    public function __toString()
+    {
+        return $this->string;
     }
 
 }
