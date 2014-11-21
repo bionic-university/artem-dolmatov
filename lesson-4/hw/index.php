@@ -13,8 +13,9 @@ $gates = new Gates();
 $window = new Window();
 $keeper = new KeyKeeper();
 $line = '';
+for ($i=0 ; $i<80; $i++){echo "=";};
 while ($line != 'Q') {
-    echo PHP_EOL . ' Please type the object you would like KeyKeeper to open/close?' . PHP_EOL . ' |window|chest|door|gates| ' . PHP_EOL . ' Press "q" to exit ' . PHP_EOL;
+    echo PHP_EOL . ' Please type the object you would like KeyKeeper to open/close?' . PHP_EOL . ' |window|chest|door|gates| ' . PHP_EOL . ' Press "q" to exit ' . PHP_EOL.'--> ';
     $line = ucfirst(strtolower(trim(fgets(STDIN))));
     switch ($line) {
         case 'Window' :

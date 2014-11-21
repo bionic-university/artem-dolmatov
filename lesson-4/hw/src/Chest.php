@@ -1,6 +1,6 @@
 <?php
 
-class chest extends OpenClose implements LockableInterface
+class Chest extends OpenClose implements LockableInterface
 {
     private $is_locked = true;
 

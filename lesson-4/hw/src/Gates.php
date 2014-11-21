@@ -1,6 +1,6 @@
 <?php
 
-class gates extends OpenClose implements LockableInterface
+class Gates extends OpenClose implements LockableInterface
 {
     private $is_locked = true;
 

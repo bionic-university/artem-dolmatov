@@ -1,6 +1,6 @@
 <?php
 
-class keyKeeper
+class KeyKeeper
 {
     private $string = '';
 

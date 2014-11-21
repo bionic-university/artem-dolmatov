@@ -1,5 +1,5 @@
 <?php
 
-class window extends OpenClose
+class Window extends OpenClose
 {
 }

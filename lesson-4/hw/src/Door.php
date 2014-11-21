@@ -1,6 +1,6 @@
 <?php
 
-class door extends OpenClose implements LockableInterface
+class Door extends OpenClose implements LockableInterface
 {
     private $is_locked = true;
 
