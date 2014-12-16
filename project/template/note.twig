@@ -1,0 +1,50 @@
+{% block title %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+</head>
+{% endblock title %}
+{% block body %}
+<body>
+
+    {% block form_radio %}
+
+
+        {{ go }}
+        {{ the.kkk.username }}
+        <form action="" method="post" >
+    <select name="tag" onchange="this.form.submit()">
+        <option selected disabled>attach tag</option>
+        {% for key, value in tags %}
+            <option value="{{ value.name }}">{{ value.name  }}</option>
+
+    {% endfor %}
+        <input type="submit" value="Attach">
+        </form>
+</select>
+        SELECTED TAGS:
+    {% for key, value in selected %}
+{{ value }}
+    {% endfor %}
+        <form action="" method="post">
+        <input type="submit" name="clearPreviousTag" value="<<<">
+        </form>
+        <form action="" method="post">
+            <input type="submit" name="clearTags" value="Clear">
+        </form>
+
+
+        <form action="" method="post">
+        <textarea name="body"></textarea>
+            <input type="submit" value="add note">
+
+            <input type="text" value="tag">
+        <input type="submit" value="add tag">
+        </form>
+
+    {% endblock form_radio %}
+</body>
+</html>
+{% endblock body %}
+

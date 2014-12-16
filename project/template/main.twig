@@ -1,0 +1,25 @@
+{% block title %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+</head>
+{% endblock title %}
+{% block body %}
+<body>
+
+    {% block form_radio %}
+
+        <form action="" method="post">
+
+            <input type="submit" name="addnote" value="add note">
+
+        <input type="submit" name="addbook" value="add book">
+        <input type="submit" name="addtag" value="add tag"></form>
+
+    {% endblock form_radio %}
+
+</body>
+</html>
+{% endblock body %}
+
