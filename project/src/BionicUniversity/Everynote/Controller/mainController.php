@@ -9,8 +9,14 @@ $twig = new Twig_Environment($loader, array(
 ));
 echo $twig->render('main.twig', array('the' => 'variables', 'go' => 'here'));
 
+//initialization
 $user = new User();
 $notes = new Note();
 $db = new DB();
-Service::listenAction($user, $notes, $db);
+$tags = new Tag();
+
+//request analyzer
+Service::listenAction($user, $notes, $db,$tags );
+
+//shows all notes of current user
 $notes->getAllNotes();

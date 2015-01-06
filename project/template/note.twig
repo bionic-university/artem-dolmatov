@@ -10,19 +10,16 @@
 
     {% block form_radio %}
 
-
-        {{ go }}
-        {{ the.kkk.username }}
         <form action="" method="post" >
     <select name="tag" onchange="this.form.submit()">
         <option selected disabled>attach tag</option>
         {% for key, value in tags %}
-            <option value="{{ value.name }}">{{ value.name  }}</option>
+            <option value="{{ value.id }}">{{ value.name }}</option>
+        {% endfor %}
+    </select>
 
-    {% endfor %}
-        <input type="submit" value="Attach">
         </form>
-</select>
+
         SELECTED TAGS:
     {% for key, value in selected %}
 {{ value }}
@@ -34,13 +31,9 @@
             <input type="submit" name="clearTags" value="Clear">
         </form>
 
-
         <form action="" method="post">
-        <textarea name="body"></textarea>
+            <textarea name="body"></textarea>
             <input type="submit" value="add note">
-
-            <input type="text" value="tag">
-        <input type="submit" value="add tag">
         </form>
 
     {% endblock form_radio %}

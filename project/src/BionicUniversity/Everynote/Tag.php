@@ -1,9 +1,11 @@
 <?php
 
 class Tag {
-    public function createTag($tag_name){
+    public function createTag($tag_name, $note_id){
+
         if (self::checkDuplicateTag($tag_name) == 'duplicate found')  return;
-        else DB::doQuery("INSERT INTO tags (`name`,`author`) VALUES ('$tag_name','$_SESSION[user]')");
+
+        else {DB::doQuery("INSERT INTO tags (`name`,`author`) VALUES ('$tag_name','$_SESSION[user]')");}
     }
 
     public function checkDuplicateTag($tag_name){
@@ -32,7 +34,26 @@ class Tag {
         array_pop($_SESSION['tags']);
     }
     public function tagsCheck(){
-        if ($_POST['clearPreviousTag']) { self::clearPreviousTag();}
-        elseif ($_POST['clearTags']){ self::clearTags();}
+        if ($_POST['clearPreviousTag']) { self::clearPreviousTag();$_POST['clearPreviousTag'] = null;}
+        elseif ($_POST['clearTags']){ self::clearTags(); $_POST['clearTags'] = null;}
+    }
+
+    public function attachTagsToNote($note_id){
+
+        foreach ($_SESSION['tags'] as $tag_id){
+            echo 'tag-id: '.$tag_id." </br>";
+            DB::doQuery("INSERT INTO notestags (note,author,tag) VALUES ('$note_id','$_SESSION[user]','$tag_id')");}
+        $_SESSION['tags']= null;
+    }
+
+    public function getAllSelectedTagNamesById(){
+        $selected_tags = [];
+        foreach ($_SESSION['tags'] as $selected_tag_id) {
+            foreach (self::getAllTags() as $tag)
+                { if ($tag['id'] == $selected_tag_id) {
+                    array_push($selected_tags,$tag['name']);}
+                }
+        }
+        return $selected_tags;
     }
 } 

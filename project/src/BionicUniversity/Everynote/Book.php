@@ -13,7 +13,7 @@ class Book {
 
         if (self::checkDuplicateBooks($book_name,$author) == 'no duplicates')
         { DB::doQuery("INSERT INTO books (name, author) VALUES ('$book_name','$author')");}
-        echo ("INSERT INTO books (name, author) VALUES ('$book_name','$author')");
+        //echo ("INSERT INTO books (name, author) VALUES ('$book_name','$author')");
 
     }
     public function checkDuplicateBooks($book_name, $author){

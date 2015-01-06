@@ -22,7 +22,7 @@ class __TwigTemplate_70da55d8924489546c21d8837eeb4db8d193859033b2691052a8a67e06f
         $this->displayBlock('title', $context, $blocks);
         // line 8
         $this->displayBlock('body', $context, $blocks);
-        // line 50
+        // line 43
         echo "
 ";
     }
@@ -48,7 +48,7 @@ class __TwigTemplate_70da55d8924489546c21d8837eeb4db8d193859033b2691052a8a67e06f
     ";
         // line 11
         $this->displayBlock('form_radio', $context, $blocks);
-        // line 47
+        // line 40
         echo "</body>
 </html>
 ";
@@ -59,46 +59,37 @@ class __TwigTemplate_70da55d8924489546c21d8837eeb4db8d193859033b2691052a8a67e06f
     {
         // line 12
         echo "
-
-        ";
-        // line 14
-        echo twig_escape_filter($this->env, (isset($context["go"]) ? $context["go"] : null), "html", null, true);
-        echo "
-        ";
-        // line 15
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["the"]) ? $context["the"] : null), "kkk", array()), "username", array()), "html", null, true);
-        echo "
         <form action=\"\" method=\"post\" >
     <select name=\"tag\" onchange=\"this.form.submit()\">
         <option selected disabled>attach tag</option>
         ";
-        // line 19
+        // line 16
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["tags"]) ? $context["tags"] : null));
         foreach ($context['_seq'] as $context["key"] => $context["value"]) {
-            // line 20
+            // line 17
             echo "            <option value=\"";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["value"], "name", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["value"], "id", array()), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["value"], "name", array()), "html", null, true);
             echo "</option>
-
-    ";
+        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['value'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 23
-        echo "        <input type=\"submit\" value=\"Attach\">
+        // line 19
+        echo "    </select>
+
         </form>
-</select>
+
         SELECTED TAGS:
     ";
-        // line 27
+        // line 24
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["selected"]) ? $context["selected"] : null));
         foreach ($context['_seq'] as $context["key"] => $context["value"]) {
-            // line 28
+            // line 25
             echo twig_escape_filter($this->env, $context["value"], "html", null, true);
             echo "
     ";
@@ -106,7 +97,7 @@ class __TwigTemplate_70da55d8924489546c21d8837eeb4db8d193859033b2691052a8a67e06f
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['value'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 30
+        // line 27
         echo "        <form action=\"\" method=\"post\">
         <input type=\"submit\" name=\"clearPreviousTag\" value=\"<<<\">
         </form>
@@ -114,13 +105,9 @@ class __TwigTemplate_70da55d8924489546c21d8837eeb4db8d193859033b2691052a8a67e06f
             <input type=\"submit\" name=\"clearTags\" value=\"Clear\">
         </form>
 
-
         <form action=\"\" method=\"post\">
-        <textarea name=\"body\"></textarea>
+            <textarea name=\"body\"></textarea>
             <input type=\"submit\" value=\"add note\">
-
-            <input type=\"text\" value=\"tag\">
-        <input type=\"submit\" value=\"add tag\">
         </form>
 
     ";
@@ -133,6 +120,6 @@ class __TwigTemplate_70da55d8924489546c21d8837eeb4db8d193859033b2691052a8a67e06f
 
     public function getDebugInfo()
     {
-        return array (  110 => 30,  102 => 28,  98 => 27,  92 => 23,  80 => 20,  76 => 19,  69 => 15,  65 => 14,  61 => 12,  58 => 11,  52 => 47,  50 => 11,  46 => 9,  43 => 8,  34 => 2,  31 => 1,  26 => 50,  24 => 8,  22 => 1,);
+        return array (  101 => 27,  93 => 25,  89 => 24,  82 => 19,  71 => 17,  67 => 16,  61 => 12,  58 => 11,  52 => 40,  50 => 11,  46 => 9,  43 => 8,  34 => 2,  31 => 1,  26 => 43,  24 => 8,  22 => 1,);
     }
 }

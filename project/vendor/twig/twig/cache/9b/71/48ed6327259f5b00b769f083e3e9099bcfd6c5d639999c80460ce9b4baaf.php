@@ -22,7 +22,7 @@ class __TwigTemplate_9b7148ed6327259f5b00b769f083e3e9099bcfd6c5d639999c80460ce9b
         $this->displayBlock('title', $context, $blocks);
         // line 8
         $this->displayBlock('body', $context, $blocks);
-        // line 25
+        // line 23
         echo "
 ";
     }
@@ -48,7 +48,7 @@ class __TwigTemplate_9b7148ed6327259f5b00b769f083e3e9099bcfd6c5d639999c80460ce9b
     ";
         // line 11
         $this->displayBlock('form_radio', $context, $blocks);
-        // line 21
+        // line 19
         echo "
 </body>
 </html>
@@ -61,11 +61,9 @@ class __TwigTemplate_9b7148ed6327259f5b00b769f083e3e9099bcfd6c5d639999c80460ce9b
         // line 12
         echo "
         <form action=\"\" method=\"post\">
-
             <input type=\"submit\" name=\"addnote\" value=\"add note\">
-
-        <input type=\"submit\" name=\"addbook\" value=\"add book\">
-        <input type=\"submit\" name=\"addtag\" value=\"add tag\"></form>
+            <input type=\"submit\" name=\"addbook\" value=\"add book\">
+        </form>
 
     ";
     }
@@ -77,6 +75,6 @@ class __TwigTemplate_9b7148ed6327259f5b00b769f083e3e9099bcfd6c5d639999c80460ce9b
 
     public function getDebugInfo()
     {
-        return array (  62 => 12,  59 => 11,  52 => 21,  50 => 11,  46 => 9,  43 => 8,  34 => 2,  31 => 1,  26 => 25,  24 => 8,  22 => 1,);
+        return array (  62 => 12,  59 => 11,  52 => 19,  50 => 11,  46 => 9,  43 => 8,  34 => 2,  31 => 1,  26 => 23,  24 => 8,  22 => 1,);
     }
 }
