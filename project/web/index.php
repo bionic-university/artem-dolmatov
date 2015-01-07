@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ERROR);
+require '../vendor/autoload.php';
 spl_autoload_register(function ($class) {
     include '../src/BionicUniversity/Everynote/' . $class . '.php';
 });
@@ -36,3 +38,4 @@ require '../src/BionicUniversity/Everynote/Controller/authorizeController.php';
 
 
 Service::loadSection();
+
