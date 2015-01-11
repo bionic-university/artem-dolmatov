@@ -21,7 +21,6 @@ class User
         $pwd = crypt($pwd,'$1$');
         $db->sendQuery("INSERT INTO notes.users (`name`,`pwd`,`email`,`fname`,`lname`) VALUES ('$name','$pwd','$email', '$fname', '$lname' );");
         $this->id = $db->sendQuery("SELECT id FROM notes.users WHERE name = '$name'; ");
-        var_dump($this->id);
         return "User  $name was registered successfully";
     }
     public function getUserId()

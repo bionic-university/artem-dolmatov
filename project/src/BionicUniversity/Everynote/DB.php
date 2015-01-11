@@ -39,4 +39,16 @@ public static $datab = '';
 
         return $a;
     }
+
+    public static function searcher(){
+
+        Self::connect();
+        $query = "SELECT * FROM `notes` WHERE `body` LIKE '%$word%';";
+        $a = Self::$datab->query($query);
+
+
+
+
+
+    }
 } 
